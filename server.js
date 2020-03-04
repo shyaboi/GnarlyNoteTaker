@@ -17,7 +17,7 @@ app.use(express.json());
 
 // index file send--------------------------------------------------------------
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "Develop/db/public/assests/index.html"));
   });
 
 //   --------------------------------------------------------
