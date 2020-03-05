@@ -27,12 +27,24 @@ app.get("/notes", function(req, res) {
   res.sendFile(path.join(__dirname, "public/notes.html"));
 });
 
-app.get("/api/notes", (req, res) =>{
-  res.json(db)
-  characters.push(newCharacter);
-
-  res.json(newCharacter)
+app.get("/api/notes",function(req,res){
+  res.sendFile(path.join(__dirname, "Develop/db/db.json"))
 })
+app.post("/api/notes", function(req, res) {
+  // req.body hosts is equal to the JSON post sent from the user
+  // This works because of our body parsing middleware
+  var newNote = req.body;
+
+  // Using a RegEx Pattern to remove spaces from newCharacter
+  // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+  //newCharacter.routeName = newCharacter.name.replace(/\s+/g, "").toLowerCase();
+
+  console.log(newNote);
+
+  notes.push(newNote);
+
+  res.json(newNote);
+});
 // app.use(express.static(path.join(__dirname, 'public')))
 //   --------------------------------------------------------
 app.post("/api/notes", function(req, res) {
