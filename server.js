@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
+var db = (__dirname, "Develop/db/db.json")
 // exxample app.get
 // app.get("/reserve", function(req, res) {
 //     res.sendFile(path.join(__dirname, "reserve.html"));
@@ -26,7 +27,12 @@ app.get("/notes", function(req, res) {
   res.sendFile(path.join(__dirname, "public/notes.html"));
 });
 
-app.get("/api/notes", (req, res) => res.json(db));
+app.get("/api/notes", (req, res) =>{
+  res.json(db)
+  characters.push(newCharacter);
+
+  res.json(newCharacter)
+})
 // app.use(express.static(path.join(__dirname, 'public')))
 //   --------------------------------------------------------
 app.post("/api/notes", function(req, res) {
