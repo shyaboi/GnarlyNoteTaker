@@ -1,22 +1,16 @@
 {
-  "name": "gnarlynotetaker",
-  "version": "1.0.0",
-  "description": "Note taker in node.js and javascript running on express",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shyaboi/GnarlyNoteTaker.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shyaboi/GnarlyNoteTaker/issues"
-  },
-  "homepage": "https://github.com/shyaboi/GnarlyNoteTaker#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+    "name": "note-taker",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.4",
+        "uuid": "^7.0.1"
+    }
 }
